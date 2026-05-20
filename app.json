@@ -13,7 +13,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "processing"]
+      }
     },
     "android": {
       "package": "com.indicators.app",
@@ -28,7 +31,14 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "./plugins/withDisableRtl.js"
+      "./plugins/withDisableRtl.js",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#16a34a"
+        }
+      ]
     ]
   }
 }
